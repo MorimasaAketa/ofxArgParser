@@ -1,9 +1,9 @@
-#include "testApp.h"
+#include "ofApp.h"
 
 #include "ofxArgParser.h"
 
 //--------------------------------------------------------------
-void testApp::setup()
+void ofApp::setup()
 {
 	ofSetFrameRate(60);
 	ofSetVerticalSync(true);
@@ -15,71 +15,73 @@ void testApp::setup()
 	vector<string> keys = ofxArgParser::allKeys();
 	for (int i = 0; i < keys.size(); i++)
 		cout << "key: " << keys[i] << ", value: " << ofxArgParser::getValue(keys[i]) << endl;
-	
+	if (keys.size() == 0) {
+		cout << "usage: % example.exe -opt <opt1value> -opt2 <opt2value>.";
+	}
 	ofExit();
 }
 
 //--------------------------------------------------------------
-void testApp::update()
+void ofApp::update()
 {
 }
 
 //--------------------------------------------------------------
-void testApp::draw()
-{
-
-}
-
-//--------------------------------------------------------------
-void testApp::keyPressed(int key)
+void ofApp::draw()
 {
 
 }
 
 //--------------------------------------------------------------
-void testApp::keyReleased(int key)
+void ofApp::keyPressed(int key)
 {
 
 }
 
 //--------------------------------------------------------------
-void testApp::mouseMoved(int x, int y)
+void ofApp::keyReleased(int key)
 {
 
 }
 
 //--------------------------------------------------------------
-void testApp::mouseDragged(int x, int y, int button)
+void ofApp::mouseMoved(int x, int y)
 {
 
 }
 
 //--------------------------------------------------------------
-void testApp::mousePressed(int x, int y, int button)
+void ofApp::mouseDragged(int x, int y, int button)
 {
 
 }
 
 //--------------------------------------------------------------
-void testApp::mouseReleased(int x, int y, int button)
+void ofApp::mousePressed(int x, int y, int button)
 {
 
 }
 
 //--------------------------------------------------------------
-void testApp::windowResized(int w, int h)
+void ofApp::mouseReleased(int x, int y, int button)
 {
 
 }
 
 //--------------------------------------------------------------
-void testApp::gotMessage(ofMessage msg)
+void ofApp::windowResized(int w, int h)
 {
 
 }
 
 //--------------------------------------------------------------
-void testApp::dragEvent(ofDragInfo dragInfo)
+void ofApp::gotMessage(ofMessage msg)
+{
+
+}
+
+//--------------------------------------------------------------
+void ofApp::dragEvent(ofDragInfo dragInfo)
 {
 
 }
