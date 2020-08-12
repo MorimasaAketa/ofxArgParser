@@ -16,7 +16,7 @@ void ofApp::setup()
 	for (int i = 0; i < keys.size(); i++)
 		cout << "key: " << keys[i] << ", value: " << ofxArgParser::getValue(keys[i]) << endl;
 	if (keys.size() == 0) {
-		cout << "usage: % example.exe -opt <opt1value> -opt2 <opt2value>.";
+		cout << "usage: % example.exe -key1 <value1> -key2 <value2>." << endl;
 	}
 	ofExit();
 }
